@@ -81,7 +81,7 @@ auto_install() {
 	sudo apt update
 	sudo apt upgrade -y
 	sudo apt install wget jq git build-essential -y
-	. <(wget -qO- https://raw.githubusercontent.com/Kallen-c/utils/main/installers/tendermint.sh)
+	. <(wget -qO- https://raw.githubusercontent.com/Kallen-c/anoma/main/gettm.sh)
 	cd
 	local anoma_version=`wget -qO- https://api.github.com/repos/anoma/anoma/releases/latest | jq -r ".tag_name"`
 	wget -q "https://github.com/anoma/anoma/releases/download/${anoma_version}/anoma-${anoma_version}-Linux-x86_64.tar.gz"
